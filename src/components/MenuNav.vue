@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <router-link to="/">
         <a href="/" class="navbar-brand">
@@ -51,9 +51,15 @@ a {
   display: inline-block;
   text-decoration: none;
   color: #1e1e1e;
-  margin-right: 15px;
+  margin-right: 10px;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
+  align-self: center;
+}
+
+.show a,
+.collapsing a {
+  align-self: flex-start;
 }
 
 a:hover {
@@ -62,6 +68,7 @@ a:hover {
 
 a.router-link-exact-active {
   color: #1d74c5;
+  font-weight: bold;
 }
 
 .resultados {
