@@ -1,0 +1,99 @@
+<template>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <router-link to="/">
+        <a href="/" class="navbar-brand">
+          <img class="logo" src="@/assets/logo.png" alt="Viana Diagnósticos" />
+        </a>
+      </router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <router-link class="nav-link" to="/sobre">Sobre</router-link>
+          <router-link class="nav-link" to="/unidades">Unidades</router-link>
+          <router-link class="nav-link" to="/exames">Convênios</router-link>
+          <router-link class="nav-link" to="/convenios">Exames</router-link>
+          <router-link class="nav-link" to="/faleconosco"
+            >Fale conosco</router-link
+          >
+          <a href="#" class="nav-link resultados">Resultados</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script>
+export default { name: 'MenuNav' };
+</script>
+
+<style scoped>
+nav {
+  background: white;
+  box-shadow: 5px 5px 9px -2px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #1e1e1e;
+  margin-right: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: #1d74c5;
+}
+
+a.router-link-exact-active {
+  color: #1d74c5;
+}
+
+.resultados {
+  background: white;
+  border: 3px solid #1d74c5;
+  border-radius: 5px;
+  color: #1d74c5;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin-right: 0px;
+  width: fit-content;
+}
+
+.resultados:hover {
+  background: #1d74c5;
+  color: white;
+}
+/*
+.resultados a {
+  color: #1d74c5;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin-right: 0px;
+}
+.resultados a:hover {
+  background: #1d74c5;
+  color: white;
+}
+
+.navbar a.router-link-active li a {
+  color: #1d74c5;
+} */
+</style>
