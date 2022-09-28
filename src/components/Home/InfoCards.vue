@@ -29,7 +29,7 @@
               <h5>Visualizar Resultados</h5>
             </div>
             <p>Visualize os resultados dos exames realizados conosco.</p>
-            <button class="btn" v-b-modal.modal-resultados>Resultados</button>
+            <button class="btn">Resultados</button>
           </div>
         </div>
       </div>

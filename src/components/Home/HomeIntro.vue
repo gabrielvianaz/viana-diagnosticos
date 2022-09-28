@@ -24,7 +24,6 @@ export default {
 
 <style scoped>
 .intro {
-  margin-top: 66px;
   font-family: 'Montserrat', sans-serif;
   background: url('@/assets/home/home-intro.png');
   height: 350px;

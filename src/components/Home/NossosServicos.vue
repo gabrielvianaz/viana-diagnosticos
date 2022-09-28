@@ -2,7 +2,7 @@
   <section class="servicos">
     <div class="container">
       <h1 class="titulo text-center">Nossos Serviços</h1>
-      <div class="servicos-lista">
+      <div v-if="!loading" class="servicos-lista">
         <div
           class="row"
           v-for="(servico, index) in servicosImpar"
@@ -28,6 +28,9 @@
           </div>
         </div>
       </div>
+      <div v-else class="spinner-border azul" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
   </section>
 </template>
@@ -40,6 +43,7 @@ export default {
       servicos: null,
       servicosImpar: null,
       servicosPar: null,
+      loading: true,
     };
   },
   methods: {
@@ -47,10 +51,11 @@ export default {
       this.servicos = await (
         await fetch('https://fakeapi-laboratorio.herokuapp.com/servicos')
       ).json();
+      this.loading = false;
     },
   },
   created() {
-    setTimeout(() => this.getServicos(), 500000);
+    this.getServicos();
   },
   watch: {
     servicos() {
@@ -65,7 +70,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .servicos-lista .row {
   margin-bottom: 30px;
 }
@@ -120,12 +125,17 @@ export default {
     margin: 30px 0;
   }
 
-  .servico {
+  .spinner-border.azul {
+    margin-bottom: 30px;
+  }
+
+  div.servico {
     display: flex;
     flex-direction: column;
     max-width: 300px;
     height: 340px;
     margin: 0 auto 30px auto;
+    padding: 10px;
     align-items: center;
     justify-content: center;
   }
@@ -146,7 +156,7 @@ export default {
 
   .servico-dados h5 {
     font-size: 1rem;
-    margin: 5px;
+    margin: 10px auto;
   }
 
   .servicos-lista .row {
@@ -155,6 +165,14 @@ export default {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+  h1.titulo {
+    margin: 30px 0;
+  }
+
+  .spinner-border.azul {
+    margin-bottom: 30px;
+  }
+
   .servico {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -187,6 +205,10 @@ export default {
     margin: 30px 0;
   }
 
+  .spinner-border.azul {
+    margin-bottom: 30px;
+  }
+
   .servico {
     grid-template-columns: 300px 1fr;
     justify-items: center;
@@ -216,10 +238,6 @@ export default {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  h1.titulo {
-    margin: 30px 0;
-  }
-
   .servico {
     grid-template-columns: 200px 1fr;
     align-items: center;
@@ -233,10 +251,6 @@ export default {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  h1.titulo {
-    margin: 30px 0;
-  }
-
   .servico {
     grid-template-columns: 250px 1fr;
     justify-items: center;

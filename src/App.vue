@@ -1,13 +1,17 @@
 <template>
   <div id="app">
     <MenuNav></MenuNav>
-    <router-view />
+    <main>
+      <router-view></router-view>
+    </main>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
 import MenuNav from './components/MenuNav.vue';
-export default { components: { MenuNav } };
+import FooterComponent from './components/FooterComponent.vue';
+export default { components: { MenuNav, FooterComponent } };
 </script>
 
 <style>
@@ -28,6 +32,12 @@ span {
   margin: 0;
   padding: 0;
 }
+
+main {
+  flex: 1;
+  margin-top: 66px;
+}
+
 #app {
   font-family: 'Montserrat', sans-serif;
   background: #f5f5f5;
@@ -42,5 +52,9 @@ span {
   color: #1d74c5;
   text-transform: uppercase;
   margin: 50px 0;
+}
+
+.azul {
+  color: #1d74c5;
 }
 </style>
