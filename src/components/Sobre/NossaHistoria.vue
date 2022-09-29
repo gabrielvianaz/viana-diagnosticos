@@ -2,7 +2,7 @@
   <div class="historia">
     <h1 class="titulo">Nossa História</h1>
     <div class="row">
-      <div class="col-6">
+      <div class="col-lg-6">
         <p>
           Atuamos no mercado de análises clínicas há 20 anos. Com o passar do
           tempo, com base na utilização de novas tecnologias, conseguimos
@@ -15,7 +15,7 @@
           laboratorial em nosso estado.
         </p>
       </div>
-      <div class="col-6">
+      <div class="col-lg-6">
         <img src="@/assets/sobre/historia/fachada.jpg" alt="" />
       </div>
     </div>
@@ -32,5 +32,15 @@ export default {
 .historia img {
   max-width: 100%;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 599px) {
+  .sobre {
+    margin-top: 30px;
+  }
+
+  .sobre .titulo {
+    margin-top: 30px;
+  }
 }
 </style>

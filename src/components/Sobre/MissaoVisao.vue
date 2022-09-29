@@ -2,7 +2,7 @@
   <div class="missao">
     <h1 class="titulo">Missão, visão e valores</h1>
     <div class="row">
-      <div class="col-6">
+      <div class="col-lg-6">
         <h6>Missão</h6>
         <p>Exercer medicina laboratorial especializada e personalizada.</p>
         <h6>Visão</h6>
@@ -15,7 +15,7 @@
           <li>Respeito à vida</li>
         </ul>
       </div>
-      <div class="col-6 img">
+      <div class="col-lg-6">
         <img src="@/assets/sobre/missao/fachada.png" alt="" />
       </div>
     </div>
@@ -52,7 +52,15 @@ ul {
   display: inline-block;
   margin-right: 10px;
 }
-.missao .img img {
+.missao img {
   max-width: 100%;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 991px) {
+  .missao img {
+    margin-top: 30px;
+  }
 }
 </style>

@@ -66,7 +66,7 @@ a:hover {
   color: #1d74c5;
 }
 
-a.router-link-exact-active {
+a.router-link-active {
   color: #1d74c5;
   font-weight: bold;
 }

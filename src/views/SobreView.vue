@@ -2,10 +2,10 @@
   <section class="sobre">
     <div class="container">
       <div class="row">
-        <div class="col-4 menu">
+        <div class="col-lg-4 menu">
           <SobreMenu></SobreMenu>
         </div>
-        <div class="col-8 info">
+        <div class="col-lg-8 info">
           <router-view></router-view>
         </div>
       </div>
@@ -28,5 +28,17 @@ export default {
 
 .sobre .titulo {
   margin: 0 0 30px 0;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 991px) {
+  .sobre {
+    margin-top: 30px;
+  }
+
+  .sobre .titulo {
+    margin-top: 30px;
+  }
 }
 </style>

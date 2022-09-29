@@ -44,37 +44,77 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .membro {
   display: grid;
   grid-template-columns: 300px 1fr;
   margin-bottom: 30px;
 }
+
 .membro img {
   height: 150px;
   border-radius: 5px;
-  margin-bottom: 30px;
 }
+
 .membro .dados {
   align-self: center;
 }
+
 .membro .dados h6 {
   font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
 }
+
+.membro .dados p {
+  margin: 0;
+}
+
 .membro.reverse {
   grid-template-columns: 1fr 300px;
 }
+
 .membro.reverse .dados {
   grid-column: 1 / 2;
   grid-row: 1;
 }
+
 .membro.reverse img {
   grid-column: 2 / 3;
   justify-self: end;
 }
+
 .corpo-clinico div:last-child {
   margin-bottom: 0;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 767px) {
+  .membro {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .membro.reverse {
+    grid-template-columns: 1fr 200px;
+  }
+
+  .membro img,
+  .membro.reverse img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .membro .dados {
+    margin-left: 10px;
+  }
+
+  .membro.reverse .dados {
+    margin: 0 10px 0 0;
+  }
+
+  .membro .dados p {
+    font-size: 0.875rem;
+  }
 }
 </style>

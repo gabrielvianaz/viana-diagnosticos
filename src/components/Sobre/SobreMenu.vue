@@ -27,23 +27,40 @@ export default {
 };
 </script>
 
-<style>
-.menu-sobre a {
+<style scoped>
+a.menu-option {
   text-decoration: none;
   color: #1e1e1e;
   font-size: 1.5rem;
   font-weight: bold;
 }
-a.ativo {
+
+a.router-link-exact-active {
   color: #1d74c5;
 }
+
 .menu-option {
   display: grid;
   grid-template-columns: 50px 1fr;
 }
+
 .menu-option img {
   justify-self: end;
   align-self: center;
   margin-right: 20px;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 599px) {
+  .menu-sobre {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  a.menu-option {
+    font-size: 1.25rem;
+  }
 }
 </style>
