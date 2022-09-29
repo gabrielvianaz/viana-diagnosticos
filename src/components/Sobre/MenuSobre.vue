@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'SobreMenu',
+  name: 'MenuSobre',
   methods: {
     ativarComponente() {
       this.componenteAtivo = +event.target.id;

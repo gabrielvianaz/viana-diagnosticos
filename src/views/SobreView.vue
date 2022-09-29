@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 menu">
-          <SobreMenu></SobreMenu>
+          <MenuSobre></MenuSobre>
         </div>
         <div class="col-lg-8 info">
           <router-view></router-view>
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import SobreMenu from '@/components/Sobre/SobreMenu.vue';
+import MenuSobre from '@/components/Sobre/MenuSobre.vue';
 export default {
   name: 'SobreView',
-  components: { SobreMenu },
+  components: { MenuSobre },
 };
 </script>
 

@@ -87,20 +87,4 @@ a.router-link-active {
   background: #1d74c5;
   color: white;
 }
-/*
-.resultados a {
-  color: #1d74c5;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 15px;
-  margin-right: 0px;
-}
-.resultados a:hover {
-  background: #1d74c5;
-  color: white;
-}
-
-.navbar a.router-link-active li a {
-  color: #1d74c5;
-} */
 </style>
