@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue';
 import SobreView from '../views/SobreView.vue';
 import UnidadesView from '../views/UnidadesView.vue';
 import ExamesView from '../views/ExamesView.vue';
+import ContatoView from '../views/ContatoView.vue';
 import NossaHistoria from '../components/Sobre/NossaHistoria.vue';
 import MissaoVisao from '../components/Sobre/MissaoVisao.vue';
 import CorpoClinico from '../components/Sobre/CorpoClinico.vue';
@@ -53,6 +54,11 @@ const routes = [
     path: '/exames',
     name: 'exames',
     component: ExamesView,
+  },
+  {
+    path: '/contato',
+    name: 'contato',
+    component: ContatoView,
   },
 ];
 

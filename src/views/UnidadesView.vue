@@ -1,5 +1,6 @@
 <template>
   <section class="unidades">
+    <h1 class="titulo text-center">Nossas Unidades</h1>
     <NossasUnidades></NossasUnidades>
   </section>
 </template>

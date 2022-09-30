@@ -9,7 +9,9 @@
               <h5>Realizar Orçamento</h5>
             </div>
             <p>Entre em contato conosco para realizar o seu orçamento</p>
-            <button class="btn">Orçamento</button>
+            <button class="btn" @click="$router.push('contato')">
+              Orçamento
+            </button>
           </div>
           <div class="col-lg info-card">
             <div class="card-titulo">

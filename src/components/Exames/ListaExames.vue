@@ -51,7 +51,7 @@
         aria-labelledby="modalExamesLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="modalExamesLabel">
@@ -229,7 +229,9 @@ export default {
 .exames-exame p {
   text-transform: uppercase;
   align-self: center;
+  margin: 0;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .exames-exame p:hover {
@@ -286,7 +288,20 @@ export default {
 
 /* Responsivo */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 479px) {
+  .exames-exame {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .exames-exame p {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .exames-exame {
     padding: 10px;
     display: grid;
@@ -294,7 +309,7 @@ export default {
   }
 
   .exames-exame p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     margin: 0;
   }
 }

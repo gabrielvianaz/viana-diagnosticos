@@ -22,10 +22,8 @@
           <router-link class="nav-link" to="/sobre">Sobre</router-link>
           <router-link class="nav-link" to="/unidades">Unidades</router-link>
           <router-link class="nav-link" to="/exames">Exames</router-link>
-          <router-link class="nav-link" to="/faleconosco"
-            >Fale conosco</router-link
-          >
-          <a href="#" class="nav-link resultados">Resultados</a>
+          <router-link class="nav-link" to="/contato">Contato</router-link>
+          <button class="nav-link resultados">Resultados</button>
         </div>
       </div>
     </div>
