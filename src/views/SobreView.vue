@@ -39,6 +39,7 @@ export default {
 
   .sobre .titulo {
     margin-top: 30px;
+    font-size: 2rem;
   }
 }
 </style>

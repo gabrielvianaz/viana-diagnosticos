@@ -21,8 +21,7 @@
         <div class="navbar-nav">
           <router-link class="nav-link" to="/sobre">Sobre</router-link>
           <router-link class="nav-link" to="/unidades">Unidades</router-link>
-          <router-link class="nav-link" to="/exames">Convênios</router-link>
-          <router-link class="nav-link" to="/convenios">Exames</router-link>
+          <router-link class="nav-link" to="/exames">Exames</router-link>
           <router-link class="nav-link" to="/faleconosco"
             >Fale conosco</router-link
           >

@@ -1,17 +1,19 @@
 <template>
-  <div class="home">
+  <section class="home">
     <HomeIntro></HomeIntro>
     <NossosServicos></NossosServicos>
     <InfoCards></InfoCards>
-  </div>
+    <ConveniosAceitos></ConveniosAceitos>
+  </section>
 </template>
 
 <script>
 import HomeIntro from '@/components/Home/HomeIntro.vue';
 import NossosServicos from '../components/Home/NossosServicos.vue';
 import InfoCards from '@/components/Home/InfoCards.vue';
+import ConveniosAceitos from '@/components/Home/ConveniosAceitos.vue';
 export default {
   name: 'HomeView',
-  components: { HomeIntro, NossosServicos, InfoCards },
+  components: { HomeIntro, NossosServicos, InfoCards, ConveniosAceitos },
 };
 </script>

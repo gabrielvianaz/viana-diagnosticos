@@ -32,6 +32,12 @@ export default {
 .missao h6 {
   font-size: 1.125rem;
   font-weight: bold;
+  text-transform: uppercase;
+}
+
+.missao p,
+.missao h6 {
+  color: #1e1e1e;
 }
 
 .missao p,

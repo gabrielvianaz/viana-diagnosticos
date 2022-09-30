@@ -1,57 +1,61 @@
 <template>
-  <div v-if="!loading" class="container-fluid unidades">
+  <div>
     <h1 class="titulo text-center">Nossas Unidades</h1>
-    <div class="container">
-      <span @click="voltarSlide" class="slide-control">&#60;</span>
-      <div class="unidade-card">
-        <div class="row">
-          <div class="unidade">
-            <div class="unidade-img">
-              <img
-                v-if="unidades[unidadeExibida]"
-                :src="require(`../../${unidades[unidadeExibida].img}`)"
-              />
-            </div>
-            <div v-if="unidades[unidadeExibida]" class="unidade-dados">
-              <h4 class="unidade-nome">{{ unidades[unidadeExibida].nome }}</h4>
-              <div class="unidade-info">
-                <div class="dados-titulo">
-                  <img src="@/assets/unidades/endereco.svg" />
-                  <p>Endereço</p>
+    <div v-if="!loading" class="container-fluid unidades">
+      <div class="container">
+        <span @click="voltarSlide" class="slide-control">&#60;</span>
+        <div class="unidade-card">
+          <div class="row">
+            <div class="unidade">
+              <div class="unidade-img">
+                <img
+                  v-if="unidades[unidadeExibida]"
+                  :src="require(`../../${unidades[unidadeExibida].img}`)"
+                />
+              </div>
+              <div v-if="unidades[unidadeExibida]" class="unidade-dados">
+                <h4 class="unidade-nome">
+                  {{ unidades[unidadeExibida].nome }}
+                </h4>
+                <div class="unidade-info">
+                  <div class="dados-titulo">
+                    <img src="@/assets/unidades/endereco.svg" />
+                    <p>Endereço</p>
+                  </div>
+                  <p class="dados">{{ unidades[unidadeExibida].endereco }}</p>
+                  <div class="dados-titulo">
+                    <img src="@/assets/unidades/telefone.svg" />
+                    <p>Telefone</p>
+                  </div>
+                  <p class="dados">{{ unidades[unidadeExibida].telefone }}</p>
+                  <div class="dados-titulo">
+                    <img src="@/assets/unidades/whatsapp.svg" />
+                    <p>WhatsApp</p>
+                  </div>
+                  <p class="dados">{{ unidades[unidadeExibida].whatsapp }}</p>
+                  <div class="dados-titulo">
+                    <img src="@/assets/unidades/horario.svg" />
+                    <p>Horário de atendimento</p>
+                  </div>
+                  <p class="dados">
+                    Segunda a sexta-feira:
+                    {{ unidades[unidadeExibida].horarioSegSex }}
+                  </p>
+                  <p class="dados">
+                    Sábado: {{ unidades[unidadeExibida].horarioSab }}
+                  </p>
                 </div>
-                <p class="dados">{{ unidades[unidadeExibida].endereco }}</p>
-                <div class="dados-titulo">
-                  <img src="@/assets/unidades/telefone.svg" />
-                  <p>Telefone</p>
-                </div>
-                <p class="dados">{{ unidades[unidadeExibida].telefone }}</p>
-                <div class="dados-titulo">
-                  <img src="@/assets/unidades/whatsapp.svg" />
-                  <p>WhatsApp</p>
-                </div>
-                <p class="dados">{{ unidades[unidadeExibida].whatsapp }}</p>
-                <div class="dados-titulo">
-                  <img src="@/assets/unidades/horario.svg" />
-                  <p>Horário de atendimento</p>
-                </div>
-                <p class="dados">
-                  Segunda a sexta-feira:
-                  {{ unidades[unidadeExibida].horarioSegSex }}
-                </p>
-                <p class="dados">
-                  Sábado: {{ unidades[unidadeExibida].horarioSab }}
-                </p>
               </div>
             </div>
           </div>
         </div>
+        <span @click="avancarSlide" class="slide-control">&#62;</span>
       </div>
-      <span @click="avancarSlide" class="slide-control">&#62;</span>
     </div>
-  </div>
-  <div v-else class="container">
-    <div class="spinner-border azul" role="status">
-      <span class="visually-hidden">Loading...</span>
+    <div v-else class="container">
+      <div class="spinner-border azul" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
   </div>
 </template>
@@ -190,28 +194,41 @@ export default {
   margin-bottom: 5px;
 }
 
+p.dados {
+  color: #1e1e1e;
+}
+
 @media screen and (max-width: 599px) {
   .unidade {
-    grid-template-columns: 300px;
+    grid-template-columns: 230px;
   }
 
   .unidade-card {
-    width: 300px;
+    width: 230px;
   }
 
   .unidade-img img {
     max-width: 100%;
-    height: 230px;
+    height: 190px;
   }
 
   .unidade-dados {
     grid-row: 2;
-    height: 400px;
+    height: 380px;
   }
 
   .unidade-info {
     margin: 0;
     padding: 0 20px;
+  }
+
+  .unidade-nome {
+    font-size: 1.25rem;
+  }
+
+  .dados-titulo p,
+  p.dados {
+    font-size: 0.875rem;
   }
 }
 

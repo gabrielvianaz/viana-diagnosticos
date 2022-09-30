@@ -53,6 +53,10 @@ a.router-link-exact-active {
 /* Responsivo */
 
 @media screen and (max-width: 599px) {
+  a.menu-option {
+    font-size: 1.25rem;
+  }
+
   .menu-sobre {
     margin-left: 30px;
   }

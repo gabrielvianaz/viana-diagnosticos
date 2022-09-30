@@ -116,6 +116,7 @@ export default {
 
 .servico-dados p {
   font-size: 0.875rem;
+  color: #1e1e1e;
 }
 
 /* Responsivo */

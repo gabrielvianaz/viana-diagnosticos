@@ -85,9 +85,40 @@ export default {
   margin-bottom: 0;
 }
 
+.dados h6,
+.dados p {
+  color: #1e1e1e;
+}
+
 /* Responsivo */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 599px) {
+  .certificacao {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .certificacao.certificacao.reverse {
+    grid-template-columns: 1fr 150px;
+  }
+
+  .certificacao img {
+    max-width: 140px;
+    height: auto;
+    margin-right: 15px;
+    align-self: center;
+  }
+
+  .certificacao.reverse img {
+    margin: 0 0 0 15px;
+  }
+
+  .certificacao .dados h6,
+  .certificacao .dados p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
   .certificacao {
     grid-template-columns: 200px 1fr;
   }

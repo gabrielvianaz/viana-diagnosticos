@@ -34,6 +34,10 @@ export default {
   border-radius: 10px;
 }
 
+.historia p {
+  color: #1e1e1e;
+}
+
 @media screen and (max-width: 599px) {
   .sobre {
     margin-top: 30px;

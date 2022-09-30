@@ -69,7 +69,19 @@ button.btn.btn-intro:hover {
 
 /* Responsivo */
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 449px) {
+  .titulo-intro {
+    font-size: 1.5rem;
+    max-width: 350px;
+  }
+
+  .descricao-intro {
+    font-size: 0.875rem;
+    max-width: 350px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 600px) {
   .titulo-intro {
     font-size: 1.75rem;
     max-width: 350px;

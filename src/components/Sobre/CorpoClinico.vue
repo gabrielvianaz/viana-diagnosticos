@@ -84,13 +84,44 @@ export default {
   justify-self: end;
 }
 
+.dados h6,
+.dados p {
+  color: #1e1e1e;
+}
+
 .corpo-clinico div:last-child {
   margin-bottom: 0;
 }
 
 /* Responsivo */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 599px) {
+  .membro {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .membro.membro.reverse {
+    grid-template-columns: 1fr 150px;
+  }
+
+  .membro img {
+    max-width: 140px;
+    height: auto;
+    margin-right: 15px;
+    align-self: center;
+  }
+
+  .membro.reverse img {
+    margin: 0 0 0 15px;
+  }
+
+  .membro .dados h6,
+  .membro .dados p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
   .membro {
     grid-template-columns: 200px 1fr;
   }
