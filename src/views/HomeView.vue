@@ -15,5 +15,8 @@ import ConveniosAceitos from '@/components/Home/ConveniosAceitos.vue';
 export default {
   name: 'HomeView',
   components: { HomeIntro, NossosServicos, InfoCards, ConveniosAceitos },
+  created() {
+    document.title = 'Viana Diagnósticos';
+  },
 };
 </script>

@@ -40,6 +40,7 @@ export default {
   },
   created() {
     this.getCorpoClinico();
+    document.title = 'Viana Diagnósticos | Corpo clínico';
   },
 };
 </script>

@@ -2,7 +2,10 @@
   <div v-if="!loading" class="container-fluid unidades">
     <div class="container">
       <span @click="voltarSlide" class="slide-control">&#60;</span>
-      <div class="unidade-card">
+      <div
+        class="unidade-card animate__animated"
+        :class="{ animate__fadeIn: animar }"
+      >
         <div class="row">
           <div class="unidade">
             <div class="unidade-img">

@@ -15,7 +15,10 @@
           </select>
         </div>
       </div>
-      <div class="exames-container">
+      <div
+        class="exames-container animate__animated"
+        :class="{ animate__fadeIn: animar }"
+      >
         <div class="exames-exame">
           <div
             v-for="(exame, index) in examesExibidos"
@@ -100,6 +103,7 @@ export default {
         interpretacao: '',
       },
       loading: true,
+      animar: false,
     };
   },
   methods: {
@@ -115,6 +119,7 @@ export default {
     },
     ativarBotao() {
       this.paginaAtiva = +event.target.id;
+      this.animarMenu();
     },
     abrirModal() {
       this.exameModal.nome = this.examesFiltrados[+event.target.id].nome;
@@ -133,6 +138,10 @@ export default {
       this.setores = this.setores
         .split(' ')
         .filter((setor) => !setor === false);
+    },
+    animarMenu() {
+      this.animar = true;
+      setTimeout(() => (this.animar = false), '1000');
     },
   },
   created() {
@@ -170,6 +179,7 @@ export default {
           20;
         }
       }
+      this.animarMenu();
     },
   },
 };

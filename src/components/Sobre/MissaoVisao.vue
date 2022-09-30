@@ -25,6 +25,9 @@
 <script>
 export default {
   name: 'MissaoVisao',
+  created() {
+    document.title = 'Viana Diagnósticos | Missão, visão e valores';
+  },
 };
 </script>
 

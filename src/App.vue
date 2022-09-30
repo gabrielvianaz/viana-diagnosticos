@@ -2,13 +2,16 @@
   <div id="app">
     <MenuNav></MenuNav>
     <main>
-      <router-view></router-view>
+      <transition mode="out-in" appear="">
+        <router-view></router-view>
+      </transition>
     </main>
     <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
+import 'animate.css';
 import MenuNav from './components/MenuNav.vue';
 import FooterComponent from './components/FooterComponent.vue';
 export default { components: { MenuNav, FooterComponent } };
@@ -56,5 +59,23 @@ main {
 
 .azul {
   color: #1d74c5;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter {
+  transform: translate3d(0, -20px, 0);
+}
+
+.v-leave-to {
+  transform: translate3d(0, 20px, 0);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
 }
 </style>

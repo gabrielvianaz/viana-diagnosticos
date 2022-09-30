@@ -31,7 +31,13 @@
               <h5>Visualizar Resultados</h5>
             </div>
             <p>Visualize os resultados dos exames realizados conosco.</p>
-            <button class="btn">Resultados</button>
+            <button
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#modalResultados"
+            >
+              Resultados
+            </button>
           </div>
         </div>
       </div>

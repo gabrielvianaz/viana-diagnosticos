@@ -25,6 +25,9 @@
 <script>
 export default {
   name: 'NossaHistoria',
+  created() {
+    document.title = 'Viana Diagnósticos | História';
+  },
 };
 </script>
 

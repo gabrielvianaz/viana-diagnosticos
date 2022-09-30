@@ -10,6 +10,9 @@ import ContatoForm from '@/components/Contato/ContatoForm.vue';
 export default {
   name: 'ContatoView',
   components: { ContatoForm },
+  created() {
+    document.title = 'Viana Diagnósticos | Contato';
+  },
 };
 </script>
 

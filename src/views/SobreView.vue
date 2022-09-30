@@ -6,7 +6,9 @@
           <MenuSobre></MenuSobre>
         </div>
         <div class="col-lg-8 info">
-          <router-view></router-view>
+          <transition mode="out-in">
+            <router-view></router-view>
+          </transition>
         </div>
       </div>
     </div>

@@ -3,7 +3,11 @@
     <div class="container">
       <h1 class="titulo text-center">Convênios Aceitos</h1>
       <div v-if="!loading">
-        <div class="row convenios-lista" v-if="convenios">
+        <div
+          class="row convenios-lista animate__animated"
+          :class="{ animate__fadeIn: animar }"
+          v-if="convenios"
+        >
           <div
             class="col convenio"
             v-for="(convenio, index) in quantidadeConveniosExibidos"
@@ -40,6 +44,7 @@ export default {
       paginaAtiva: null,
       quantidadeConveniosExibidos: null,
       loading: true,
+      animar: false,
     };
   },
   methods: {
@@ -51,7 +56,12 @@ export default {
       this.paginaAtiva = 0;
     },
     ativarBotao() {
-      this.paginaAtiva = +event.target.id;
+      this.animar = true;
+      setTimeout(
+        () => (this.animar = false),
+        '1000',
+        (this.paginaAtiva = +event.target.id)
+      );
     },
   },
   created() {

@@ -40,6 +40,7 @@ export default {
   },
   created() {
     this.getCertificacoes();
+    document.title = 'Viana Diagnósticos | Certificações';
   },
 };
 </script>

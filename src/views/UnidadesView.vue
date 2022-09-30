@@ -10,6 +10,9 @@ import NossasUnidades from '@/components/Unidades/NossasUnidades.vue';
 export default {
   name: 'UnidadesView',
   components: { NossasUnidades },
+  created() {
+    document.title = 'Viana Diagnósticos | Nossas unidades';
+  },
 };
 </script>
 
