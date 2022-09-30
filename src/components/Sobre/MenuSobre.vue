@@ -59,7 +59,6 @@ export default {
   },
   methods: {
     ativarComponente() {
-      console.log(event.target);
       this.componenteAtivo = +event.target.id;
     },
   },
