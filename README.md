@@ -1,24 +1,11 @@
-# viana-diagnosticos
+# Viana Diagnósticos
 
-## Project setup
-```
-npm install
-```
+![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Home Viana Diagnósticos](https://i.imgur.com/pwPf1XP.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> Projeto desenvolvido utilizando Vue.js e Bootstrap, no qual consiste no site de um laboratório de análises clínicas.
