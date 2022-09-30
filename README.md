@@ -22,3 +22,4 @@ Projeto que consiste no site de um laboratório de análises clínicas, todos os
 - Totalmente responsivo
 - Modais
 - Slides
+- Paginação automática
