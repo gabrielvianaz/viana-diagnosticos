@@ -112,11 +112,13 @@ export default {
   font-size: 1.25rem;
   font-weight: bold;
   color: #1d74c5;
+  margin-bottom: 8px;
 }
 
 .servico-dados p {
   font-size: 0.875rem;
   color: #1e1e1e;
+  margin-bottom: 0;
 }
 
 /* Responsivo */

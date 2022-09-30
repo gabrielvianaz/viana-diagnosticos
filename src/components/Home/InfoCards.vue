@@ -80,12 +80,14 @@ export default {
   font-weight: bold;
   text-transform: uppercase;
   color: white;
+  margin-bottom: 8px;
 }
 
 .info-card p {
   color: white;
   font-size: 1rem;
   margin-top: 10px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
